@@ -2,11 +2,18 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/fogleman/gg"
 )
 
 func main() {
+	arg := os.Args[1]
+
+	writeToImage(arg)
+}
+
+func writeToImage(file_name string) {
 	const S = 1024
 	im, err := gg.LoadImage("src.jpg")
 	if err != nil {
