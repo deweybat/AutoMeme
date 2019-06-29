@@ -34,6 +34,7 @@ func writeToImage(file_name string) {
 	dc.DrawRoundedRectangle(0, 0, 512, 512, 0)
 	dc.DrawImage(im, 0, 0)
 	dc.DrawStringAnchored("Hello, world!", S/2, S-96, 0.5, 0.5)
+	dc.DrawStringAnchored("Hello, world!", S/2, 96, 0.5, 0.5)
 	dc.Clip()
 	dc.SavePNG("out.png")
 
